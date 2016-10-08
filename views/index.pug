@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    title= HackBop
+    link(rel='stylesheet' href='/static/style.css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet')
+
+  body
+    div(class='container')
+      div(class='info') HackBop by
+        a(href='https://twitter.com/roebuk') @roebuk
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.0/howler.core.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/static/app.js')

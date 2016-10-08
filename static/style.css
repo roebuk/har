@@ -1,0 +1,61 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: #84cdf4;
+  background: -moz-radial-gradient(center, ellipse cover,  #84cdf4 0%, #1e5799 100%);
+  background: -webkit-radial-gradient(center, ellipse cover,  #84cdf4 0%,#1e5799 100%);
+  background: radial-gradient(ellipse at center,  #84cdf4 0%,#1e5799 100%);
+  color: white;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding-left: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.dot {
+  position: absolute;
+  height: 10rem;
+  width: 10rem;
+  background: white;
+  border-radius: 50%;
+  animation-name: grow;
+  animation-duration: 8s;
+}
+
+
+@keyframes grow {
+  0% {
+    transform: scale(.1);
+    opacity: 1
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
