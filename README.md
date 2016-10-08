@@ -1,9 +1,8 @@
 # Harmony
 
-Harmony - http://hack.roeb.uk/ - is a collabrative real-time music (noise) maker. Simply tap any
-where on the screen to generate a random noise that will play to anyone that's connected.
-
-My super quick hack thrown together in around 3 hours.
+Harmony - https://harmony.roeb.uk/ - is a collabrative real-time music (read – noise) maker. Simply tap
+anywhere on the screen to generate a random sound that will play to anyone that's connected. It's
+pretty basic as it was thrown together in around 3 hours.
 
 
 Technologies used:
