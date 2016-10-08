@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }))
   }
 
-  const socket = io(`${location.protocol}//${location.hostname}:3000`, {
+  const socket = io(`${location.protocol}//${location.hostname}:80`, {
     transports: ['websocket']
   })
 
