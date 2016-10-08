@@ -6,7 +6,7 @@ const io = require('socket.io')(server);
 
 app.set('view engine', 'pug')
 app.set('port', 3000)
-app.set('address', '0.0.0.0')
+app.set('address', '127.0.0.1')
 app.use('/static', express.static('static'))
 
 app.get('/', (req, res) => {

@@ -68,6 +68,4 @@ document.addEventListener('DOMContentLoaded', () => {
     $container.appendChild(el)
     return el
   }
-
-
 })

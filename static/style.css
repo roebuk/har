@@ -9,18 +9,21 @@ body {
   background: -webkit-radial-gradient(center, ellipse cover,  #84cdf4 0%,#1e5799 100%);
   background: radial-gradient(ellipse at center,  #84cdf4 0%,#1e5799 100%);
   color: white;
-
 }
 
 a {
   color: white;
   text-decoration: none;
-  padding-left: 0.5rem;
+  padding-left: 0.3rem;
   transition: all 0.5s ease;
 }
 
 a:hover {
   opacity: 0.5;
+}
+
+span {
+  padding-left: 0.3rem;
 }
 
 .info {
@@ -37,7 +40,6 @@ a:hover {
   width: 100vw;
 }
 
-
 .dot {
   position: absolute;
   height: 10rem;
@@ -47,7 +49,6 @@ a:hover {
   animation-name: grow;
   animation-duration: 8s;
 }
-
 
 @keyframes grow {
   0% {
