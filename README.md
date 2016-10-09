@@ -26,6 +26,4 @@ To run locally:
     Point your browser at 127.0.0.1:3000
 
 
-Kristian Roebuck
-
-[@roebuk](https://twitter.com/roebuk)
+Kristian Roebuck [@roebuk](https://twitter.com/roebuk)
