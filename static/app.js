@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // HOLY FUCK THIS IS SHITTY CODE. SHOOT ME.
+  // AVERT YOUR EYES FROM THIS HORRIFIC CODE. IT WORKS (SOMEHOW) BUT IT'S NOT PRETTY.
   var audios = []
   var numOfAudios = 9
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const $container = document.querySelector('.container')
   $container.addEventListener('click', emitClick)
 
-  socket.on('playSound', function (data) {
+  socket.on('playSound', data => {
     audios[data.sound].play()
     createAndPlaceElement(data)
 
