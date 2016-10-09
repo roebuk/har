@@ -16,7 +16,7 @@ Technologies used:
 * [Howler](https://howlerjs.com/)
 
 
-To run locally:
+To run locally, make sure you have node v6.7.0 installed and perform the following commands:
 
     $ git clone git@github.com:roebuk/harmony.git
     $ cd harmony
