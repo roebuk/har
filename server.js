@@ -1,3 +1,5 @@
+'use strict'
+
 const express = require('express')
 const app = express()
 const server = require('http').Server(app);
@@ -7,6 +9,7 @@ const io = require('socket.io')(server);
 app.set('view engine', 'pug')
 app.set('port', 3000)
 app.set('address', '127.0.0.1')
+app.disable('x-powered-by')
 app.use('/static', express.static('static'))
 
 app.get('/', (req, res) => {

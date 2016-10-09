@@ -1,16 +1,19 @@
 # Harmony
 
-Harmony - https://harmony.roeb.uk/ - is a collabrative real-time music (read – noise) maker. Simply tap
-anywhere on the screen to generate a random sound that will play to anyone that's connected. It's
-pretty basic as it was thrown together in around 3 hours.
+Harmony - https://harmony.roeb.uk/ - is a collabrative real-time music (read – noise) maker. Simply
+tap anywhere on the screen to generate a random sound that will play to anyone that's connected.
+It's pretty basic as it was thrown together in around 3 hours for Lincoln Hack 16.
+
+It's only been tested in Chrome and Mobile Safari. Don't expect much action in any browser that
+doesn't support ES2015 features.
 
 
 Technologies used:
 
-* Node
-* Express - http://expressjs.com/
-* Socket.io - http://socket.io/
-* Howler - https://howlerjs.com/
+* [Node](https://nodejs.org/en/)
+* [Express](http://expressjs.com/)
+* [Socket.io](http://socket.io/)
+* [Howler](https://howlerjs.com/)
 
 
 To run locally:
@@ -24,4 +27,5 @@ To run locally:
 
 
 Kristian Roebuck
-https://twitter.com/roebuk
+
+[@roebuk](https://twitter.com/roebuk)

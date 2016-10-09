@@ -1,6 +1,8 @@
+'use strict'
+
 document.addEventListener('DOMContentLoaded', () => {
 
-  // HOLY FUCK THIS SHITTY CODE. SHOOT ME.
+  // HOLY FUCK THIS IS SHITTY CODE. SHOOT ME.
   var audios = []
   var numOfAudios = 9
 
@@ -10,39 +12,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }))
   }
 
-  const socket = io(`${location.protocol}//${location.hostname}`, {
+  const localAddresses = ['localhost', '127.0.0.1']
+  const port = localAddresses.includes(location.hostname) ? 3000 : 443
+  const socket = io(`${location.protocol}//${location.hostname}:${port}`, {
     transports: ['websocket']
   })
 
   const $container = document.querySelector('.container')
   $container.addEventListener('click', emitClick)
-  var counter = 1
 
   socket.on('playSound', function (data) {
-    counter++
     audios[data.sound].play()
-    createAndPlaceElement(data, counter)
+    createAndPlaceElement(data)
 
-    const $currentEl = document.querySelector('.dot:last-child')
-    startAnimation($currentEl)
-    cleanUpFromDOM($currentEl)
-  })
+    const $currentDot = document.querySelector('.dot:last-child')
 
-  function getRandomSound() {
-    return Math.floor(Math.random() * numOfAudios) + 1
-  }
-
-  function startAnimation($el) {
+    // Start the animation
     setTimeout(function() {
-      $el.classList.add('grow')
-    }, 0.2);
-  }
+      $currentDot.classList.add('grow')
+    }, 0.2)
 
-  function cleanUpFromDOM($el) {
+    // Remove the element from the DOM once we're done with it
     setTimeout(function() {
-      $container.removeChild($el);
+      $container.removeChild($currentDot);
     }, 7500)
-  }
+  })
 
   function emitClick(e) {
     const windowWidth = window.innerWidth
@@ -53,19 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = {
       x: parseInt(((x  / windowWidth) * 100).toFixed(2)),
       y: parseInt(((y / windowHeight) * 100).toFixed(2)),
-      sound: getRandomSound()
+      sound: Math.floor(Math.random() * numOfAudios) + 1
     }
 
     socket.emit('triggerSound', data)
   }
 
-  function createAndPlaceElement(data, counter) {
+  function createAndPlaceElement(data) {
     const el = document.createElement('div')
     el.className = `dot`
     el.style.top = `calc(${data.y}% - 5rem)`
     el.style.left = `calc(${data.x}% - 5rem)`
 
     $container.appendChild(el)
-    return el
   }
 })
