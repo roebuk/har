@@ -1,6 +1,6 @@
 # Harmony
 
-Harmony - https://harmony.roeb.uk/ - is a collabrative real-time music (read – noise) maker. Simply
+Harmony is a collabrative real-time music (read – noise) maker. Simply
 tap anywhere on the screen to generate a random sound that will play to anyone that's connected.
 It's pretty basic as it was thrown together in around 3 hours for Lincoln Hack 16.
 
